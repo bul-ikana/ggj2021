@@ -1,1 +1,1 @@
-# Global Game Jam 2021
+# ![jam](jam.png) Global Game Jam 2021
