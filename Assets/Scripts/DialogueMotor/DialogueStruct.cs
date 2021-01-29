@@ -3,7 +3,7 @@
  * involved in the conversation.
  *
  * Character is an integer representing who is talking the dialogue. 0 is the 
- * main character (aka the player) and 1 is the other player.
+ * main character (aka the player) and 1 (or higher) is the other player.
  * 
  * Text is a string with the text that will be shown on the dialogue box
  */
