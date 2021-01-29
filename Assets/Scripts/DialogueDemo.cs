@@ -8,24 +8,13 @@ public class DialogueDemo : MonoBehaviour
 {
     public void goToDialogue1()
     {
-        DialogueSettings.text = new string[] {
-            "Hey dude!",
-            "Wassap?",
-            "Not much dawg"
-        };
-
+        DialogueMotor.SetDialogue(Dialogues.greetings);
         SceneManager.LoadScene("Dialogue");
     }
 
     public void goToDialogue2()
     {
-        DialogueSettings.text = new string[] {
-            "Que le pasa a la niña?",
-            "No se",
-            "Que es lo que quiere?",
-            "Bailar!"
-        };
-
+        DialogueMotor.SetDialogue(Dialogues.lupita);
         SceneManager.LoadScene("Dialogue");
     }
 }

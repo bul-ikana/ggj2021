@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Dialogue : MonoBehaviour
+public class DialogueScene : MonoBehaviour
 {
     private int index;
 
@@ -31,8 +31,8 @@ public class Dialogue : MonoBehaviour
 
     private void RenderText()
     {
-        if (index < DialogueSettings.text.Length) {
-            dialogueText.text = DialogueSettings.text[index];   
+        if (index < DialogueMotor.Dialogue.Length) {
+            dialogueText.text = DialogueMotor.Dialogue[index].Text;   
         } else {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
