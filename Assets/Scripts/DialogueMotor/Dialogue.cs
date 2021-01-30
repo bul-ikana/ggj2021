@@ -5,9 +5,21 @@ using UnityEngine;
 public class Dialogue 
 {
 	public List<MessageStruct> Messages;
+	public string Character1Sprite;
+	public string Character2Sprite;
 
 	public Dialogue() {
 		Messages = new List<MessageStruct>();
+	}
+
+	public void SetCharacter1(string character)
+	{
+		Character1Sprite = character;
+	}
+
+	public void SetCharacter2(string character)
+	{
+		Character2Sprite = character;
 	}
 
 	public void Add(int character, string text)

@@ -22,6 +22,7 @@ public class DialogueScene : MonoBehaviour
         character1 = GameObject.Find("Character1").GetComponent<Character>();
         character2 = GameObject.Find("Character2").GetComponent<Character>();
 
+        SetCharacters();
         RenderText();
     }
 
@@ -31,6 +32,15 @@ public class DialogueScene : MonoBehaviour
             index++;
             RenderText();
         }
+    }
+
+    private void SetCharacters()
+    {
+        character1.GetComponent<SpriteRenderer>().sprite = 
+            Resources.Load<Sprite>(DialogueMotor.CurrentDialogue.Character1Sprite);
+
+        character2.GetComponent<SpriteRenderer>().sprite = 
+            Resources.Load<Sprite>(DialogueMotor.CurrentDialogue.Character2Sprite);
     }
 
     private void RenderText()
