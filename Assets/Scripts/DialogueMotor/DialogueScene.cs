@@ -9,7 +9,7 @@ public class DialogueScene : MonoBehaviour
 {
     private int index;
 
-	private Text dialogueText;
+    private Text dialogueText;
     private Character background;
     private Character character1;
     private Character character2;
