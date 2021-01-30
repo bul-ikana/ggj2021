@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public static class DialogueMotor
 {
-    public static DialogueStruct[] Dialogue;
+    public static Dialogue CurrentDialogue;
 
-    public static void SetDialogue(DialogueStruct[] dialogue)
+    public static void SetDialogue(Dialogue dialogue)
     {
-        Dialogue = dialogue;
+        CurrentDialogue = dialogue;
     }
 }

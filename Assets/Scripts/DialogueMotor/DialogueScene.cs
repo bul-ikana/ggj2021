@@ -35,9 +35,9 @@ public class DialogueScene : MonoBehaviour
 
     private void RenderText()
     {
-        if (index < DialogueMotor.Dialogue.Length) {
+        if (index < DialogueMotor.CurrentDialogue.Messages.Count) {
 
-            if (DialogueMotor.Dialogue[index].Character == 0) {
+            if (DialogueMotor.CurrentDialogue.Messages[index].Character == 0) {
                 character1.Highlight();
                 if (index != 0) character2.Deemphasize();
             } else {
@@ -45,7 +45,7 @@ public class DialogueScene : MonoBehaviour
                 if (index != 0) character1.Deemphasize();
             }
 
-            dialogueText.text = DialogueMotor.Dialogue[index].Text;   
+            dialogueText.text = DialogueMotor.CurrentDialogue.Messages[index].Text;   
         } else {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }

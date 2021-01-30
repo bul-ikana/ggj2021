@@ -4,16 +4,20 @@
  */
 public static class Dialogues
 {
-    public static DialogueStruct[] greetings = {
-        new DialogueStruct(0, "Hey dude!"),
-        new DialogueStruct(1, "Wassap"),
-        new DialogueStruct(0, "Not much dawg"),
-    };
+    public static Dialogue greetings;
+    public static Dialogue lupita;
 
-    public static DialogueStruct[] lupita = {
-        new DialogueStruct(0, "Que le pasa a esa niña?"),
-        new DialogueStruct(1, "No se"),
-        new DialogueStruct(0, "Que es lo que quiere?"),
-        new DialogueStruct(1, "Bailar!"),
-    };
+    static Dialogues()
+    {
+        Dialogues.greetings = new Dialogue();
+        Dialogues.greetings.Add(0, "Hey dude!");
+        Dialogues.greetings.Add(1, "Wassap");
+        Dialogues.greetings.Add(0, "Not much dawg");
+
+        Dialogues.lupita = new Dialogue();
+        Dialogues.lupita.Add(0, "Que le pasa a esa niña?");
+        Dialogues.lupita.Add(1, "No se");
+        Dialogues.lupita.Add(0, "Que es lo que quiere?");
+        Dialogues.lupita.Add(1, "Bailar!");
+    }
 }
