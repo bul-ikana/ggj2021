@@ -20,11 +20,11 @@ public class Character : MonoBehaviour
 
     public void Highlight()
     {
-        targetPosition = transform.TransformPoint(new Vector3(0, 1, 0));
+        targetPosition = transform.TransformPoint(new Vector3(0, 0.9F, 0));
     }
 
     public void Deemphasize()
     {
-        targetPosition = transform.TransformPoint(new Vector3(0, -1, 0));
+        targetPosition = transform.TransformPoint(new Vector3(0, -0.9F, 0));
     }
 }

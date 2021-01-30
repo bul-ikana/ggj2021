@@ -15,7 +15,6 @@ public class Dialogue
 
     public void SetBackground(string background)
     {
-        Debug.Log(background);
         BackgroundSprite = background;
     }
 
