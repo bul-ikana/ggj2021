@@ -10,6 +10,7 @@ public static class Dialogues
     static Dialogues()
     {
         Dialogues.greetings = new Dialogue();
+        Dialogues.greetings.SetBackground("bg2");
         Dialogues.greetings.SetCharacter1("character1");
         Dialogues.greetings.SetCharacter2("character2");
         Dialogues.greetings.Add(0, "Hey dude!");
@@ -17,6 +18,7 @@ public static class Dialogues
         Dialogues.greetings.Add(0, "Not much dawg");
 
         Dialogues.lupita = new Dialogue();
+        Dialogues.lupita.SetBackground("bg1");
         Dialogues.lupita.SetCharacter1("character2");
         Dialogues.lupita.SetCharacter2("character3");
         Dialogues.lupita.Add(0, "Que le pasa a esa niña?");
