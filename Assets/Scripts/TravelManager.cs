@@ -24,6 +24,9 @@ public class TravelManager : MonoBehaviour
 
     // All nodes positions
     private Dictionary<string, Vector2> travelNodes = new Dictionary<string, Vector2>();
+    
+    // All node nodes (lol)
+    private Dictionary<string, TravelNode> nodeNodes = new Dictionary<string, TravelNode>();
 
     // For controlled pauses in Update
     private float pauseDuration = 0;
@@ -51,6 +54,12 @@ public class TravelManager : MonoBehaviour
             GameObject go = travelNodesObjects[i];
             travelNodes.Add(go.gameObject.name, (Vector2)go.gameObject.transform.position);
         }
+
+        for (int i = 0; i < travelNodesObjects.Count; i++)
+        {
+            GameObject go = travelNodesObjects[i];
+            nodeNodes.Add(go.gameObject.name, go.GetComponent<TravelNode>());
+        }
     }
 
     // Update is called once per frame
@@ -76,6 +85,7 @@ public class TravelManager : MonoBehaviour
                 //Vector2 vec = travelNodes[goalNode] - charPos;
 
                 // If is still moving and changes the direction about the goalNode, meaning that was surpassed, character reached goal
+
                 //if (vec.magnitude <= 0.2f)
                 //{
                     //moving = false;
@@ -85,6 +95,7 @@ public class TravelManager : MonoBehaviour
 
                     //return;
                 //}
+
 
                 characterTransform.position += ((Vector3)direction * speed * Time.deltaTime);
             }
@@ -142,6 +153,7 @@ public class TravelManager : MonoBehaviour
         currentNode = collision.gameObject.name;
         pauseDuration = 0.05f;
         moving = false;
+        nodeNodes[currentNode].TriggerGoal();
 
         // Special exceptions for z coordinate
         if (currentNode == "Node (1)" || currentNode == "Node (5)")

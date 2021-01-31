@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2430757485
+    locked: 0
+  - name: Characters
+    uniqueID: 3006380367
+    locked: 0
+  - name: Dialogue
+    uniqueID: 4256790245
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: OverDialogue
+    uniqueID: 3698558895
     locked: 0
