@@ -28,6 +28,8 @@ public class TravelManager : MonoBehaviour
     // All node nodes (lol)
     private Dictionary<string, TravelNode> nodeNodes = new Dictionary<string, TravelNode>();
 
+    private Animator animator;
+
     // For controlled pauses in Update
     private float pauseDuration = 0;
 
@@ -35,6 +37,7 @@ public class TravelManager : MonoBehaviour
     void Start()
     {
         characterTransform = gameObject.transform;
+        animator = gameObject.GetComponent<Animator>();
         //currentNode = travelNodesObjects[0].gameObject.name;
         //originNode = currentNode;
         //goalNode = currentNode;
@@ -138,13 +141,17 @@ public class TravelManager : MonoBehaviour
 
                         goalNode = neighbors[i];
                         moving = true;
+                        animator.CrossFade("JulioWalking", 0.0f);
                         return;
                     }
                 }
             }
         }
         else
+        {
             moving = false;
+            animator.CrossFade("JulioIdle", 0.0f);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
