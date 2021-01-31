@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamePlaceholder.unity
     guid: 74b50b625fd8c4c4daa3c11c553a397b
+  - enabled: 1
+    path: Assets/Scenes/CookingScene.unity
+    guid: 1ec8e678776d243009d684d6a9ae079b
   m_configObjects: {}

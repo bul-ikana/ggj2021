@@ -6,46 +6,21 @@ using UnityEngine;
 
 public class IntroScene : MonoBehaviour
 {
-    private GameObject Julio;
+    private GameObject Sobre;
 
     public void Start()
     {
-        Julio = GameObject.Find("Julio");
-        DontDestroyOnLoad(Julio);
+        Sobre = GameObject.Find("Sobre");
+        Sobre.SetActive(false);
         DialogueMotor.CurrentScene = SceneManager.GetActiveScene().buildIndex;
-
-        // if (GameProgress.HasNot("VisitedPanthouse")) {
-        //     // CasaButton.SetActive(false);
-        //     // AbuelaButton.SetActive(false);
-        //     // PanthouseButton.SetActive(true);
-        // }
-
-        // if (GameProgress.Has("VisitedPanthouse") && GameProgress.HasNot("PlayedGameOnce")) {
-        //     CasaButton.SetActive(true);
-        //     AbuelaButton.SetActive(false);
-        //     GameProgress.Set("PlayedGameOnce", true);
-        // }
-
-        // if (GameProgress.Has("PlayedGameOnce")) {
-        //     CasaButton.SetActive(true);
-        //     PanthouseButton.SetActive(false);
-        //     AbuelaButton.SetActive(false);
-        // }
-
-        // if (GameProgress.Has("VisitedCasa")) {
-        //     CasaButton.SetActive(false);
-        //     PanthouseButton.SetActive(false);
-        //     AbuelaButton.SetActive(true);
-        // }
-
-
     }
 
     public void PanthouseActions()
     {
         if (GameProgress.HasNot("CookedOnce")) {
-            SceneManager.LoadScene("GamePlaceholder");
+            SceneManager.LoadScene("CookingScene", LoadSceneMode.Additive);
             GameProgress.Set("CookedOnce", true);
+            Sobre.SetActive(true);
         }
     }
 
@@ -56,10 +31,11 @@ public class IntroScene : MonoBehaviour
             DialogueMotor.GoToDialogue(Dialogues.inicio);
             GameProgress.Set("GoneHomeStart", true);
         }
-    }
 
-    public void AbuelaActions()
-    {
-        Debug.Log("Abuela");
+        if (GameProgress.Has("CookedOnce")) {
+            DialogueMotor.GoToDialogue(Dialogues.casa);
+            GameProgress.Set("ReadLetter", true);
+            Sobre.SetActive(false);
+        }
     }
 }

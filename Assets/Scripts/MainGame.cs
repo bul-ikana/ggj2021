@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 using System.Diagnostics;
 using System;
@@ -30,6 +31,7 @@ public class MainGame : MonoBehaviour
 
     public Button btnSell;
     public Button btnOven;
+    public GameObject btnNext;
 
     public GameObject i1;
     public GameObject i2;
@@ -51,6 +53,8 @@ public class MainGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        btnNext = GameObject.Find("Next");
+        btnNext.SetActive(false);
         // LOAD RECIPE FROM POOL
 
         goalRecipe = new int[] { 100, 3, 2, 1, 4, 3 , 5};
@@ -94,7 +98,8 @@ public class MainGame : MonoBehaviour
 
     public void initState ()
     {
-        timeRemaining = 60f; // 1 MINUTE
+        timeRemaining = 10f; // 1 MINUTE
+        // timeRemaining = 60f; // 1 MINUTE
         currentRecipe = new int[] { 0, 0, 0, 0, 0, 0, 0};
         money         = 0;
         inOven        = false;
@@ -337,8 +342,14 @@ public class MainGame : MonoBehaviour
         btnSell.interactable    = false;
 
         timeLabel.GetComponent<Text>().text = "00 : 00";
+        btnNext.SetActive(true);
+    }
 
-
+    public void Next()
+    {
+        UnityEngine.Debug.Log("next");
+        SceneManager.UnloadSceneAsync("CookingScene");
+        DialogueMotor.GoToDialogue(Dialogues.after);
     }
 
 }
