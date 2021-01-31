@@ -32,9 +32,9 @@ public class TravelManager : MonoBehaviour
     void Start()
     {
         characterTransform = gameObject.transform;
-        currentNode = travelNodesObjects[0].gameObject.name;
-        originNode = currentNode;
-        goalNode = currentNode;
+        //currentNode = travelNodesObjects[0].gameObject.name;
+        //originNode = currentNode;
+        //goalNode = currentNode;
 
         // Go to each node and save its neighbors in the list
         for (int i = 0; i < travelNodesObjects.Count; i++)
@@ -56,7 +56,7 @@ public class TravelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(pauseDuration > 0.0f)
+        if (pauseDuration > 0.0f)
         {
             pauseDuration -= Time.deltaTime;
             return;
@@ -70,22 +70,21 @@ public class TravelManager : MonoBehaviour
         if (v != 0 || h != 0)
         {
             // If is already moving, applies another step
-            if (moving)
+            if (moving/* && pressedDirection.y == v && pressedDirection.x == h*/)
             {
-                Vector2 charPos = (Vector2)characterTransform.position;
-                Vector2 vec = travelNodes[goalNode] - charPos;
+                //Vector2 charPos = (Vector2)characterTransform.position;
+                //Vector2 vec = travelNodes[goalNode] - charPos;
 
                 // If is still moving and changes the direction about the goalNode, meaning that was surpassed, character reached goal
-                if (direction != vec.normalized)
-                {
-                    characterTransform.position += ((Vector3)direction * speed * Time.deltaTime);
-                    moving = false;
-                    currentNode = goalNode;
+                //if (vec.magnitude <= 0.2f)
+                //{
+                    //moving = false;
+                    //currentNode = goalNode;
+                    //originNode = goalNode;
+                    //pauseDuration = 0.2f;
 
-                    pauseDuration = 0.2f;
-
-                    return;
-                }
+                    //return;
+                //}
 
                 characterTransform.position += ((Vector3)direction * speed * Time.deltaTime);
             }
@@ -96,7 +95,7 @@ public class TravelManager : MonoBehaviour
                 pressedDirection.y = v;
                 List<string> neighbors;
 
-                if (currentNode == goalNode)
+                if (currentNode != "")
                     neighbors = travelNeighborsMap[currentNode];
                 else
                 {
@@ -110,13 +109,22 @@ public class TravelManager : MonoBehaviour
                     Vector2 posibleDirection = travelNodes[neighbors[i]] - ((Vector2)characterTransform.position);
 
                     // Evaluates if angle of the direction pressed is close enough to node route direction 
-                    if (Mathf.Abs(Vector2.Angle(pressedDirection, posibleDirection)) <= 45.0f)
+                    if (Mathf.Abs(Vector2.Angle(pressedDirection, posibleDirection)) <= 45.0f || posibleDirection.magnitude < 0.6f)
                     {
                         direction = posibleDirection;
                         direction = direction.normalized;
                         SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
                         sr.flipX = direction.x < 0;
-                        originNode = currentNode;
+                        //if (currentNode != "")
+                        //    originNode = currentNode;
+                        if (neighbors[i] == originNode)
+                            //{
+                            //    //currentNode = goalNode;
+                            originNode = goalNode;
+                        //}
+                        //else
+                        //    originNode = currentNode;
+
                         goalNode = neighbors[i];
                         moving = true;
                         return;
@@ -126,5 +134,21 @@ public class TravelManager : MonoBehaviour
         }
         else
             moving = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Debug.Log(gameObject.name + " recived a hit from " + collision.gameObject.name);
+        currentNode = collision.gameObject.name;
+        pauseDuration = 0.05f;
+        moving = false;
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        //Debug.Log(gameObject.name + " left " + collision.gameObject.name);
+        //if (collision.gameObject.name == current)
+        originNode = collision.gameObject.name;
+        currentNode = "";
     }
 }
