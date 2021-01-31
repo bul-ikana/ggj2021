@@ -178,9 +178,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1288586929
-  m_SortingLayer: -2
-  m_SortingOrder: 0
+  m_SortingLayerID: -596408401
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2f0f17471092aa3448795d6ee1182bf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -228,7 +228,6 @@ GameObject:
   m_Component:
   - component: {fileID: 289709933}
   - component: {fileID: 289709932}
-  - component: {fileID: 289709931}
   - component: {fileID: 289709934}
   m_Layer: 0
   m_Name: Main Camera
@@ -237,14 +236,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &289709931
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289709930}
-  m_Enabled: 1
 --- !u!20 &289709932
 Camera:
   m_ObjectHideFlags: 0
@@ -369,9 +360,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1288586929
-  m_SortingLayer: -2
-  m_SortingOrder: 0
+  m_SortingLayerID: -596408401
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2f0f17471092aa3448795d6ee1182bf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -464,8 +455,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1864209811
-  m_SortingLayer: -3
+  m_SortingLayerID: -596408401
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 18fd14422b5493342ac69bc1fcf67f16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -558,9 +549,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -38177051
-  m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingLayerID: -596408401
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 01072dd109bcf3a4a966c8ce4434a0b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -663,8 +654,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -38177051
-  m_SortingOrder: 1
+  m_SortingLayerID: -596408401
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1491223870
 RectTransform:

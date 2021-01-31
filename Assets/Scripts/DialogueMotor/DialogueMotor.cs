@@ -8,6 +8,6 @@ public static class DialogueMotor
     public static void GoToDialogue(Dialogue dialogue)
     {
         CurrentDialogue = dialogue;
-        SceneManager.LoadScene("Dialogue");
+        SceneManager.LoadSceneAsync("Dialogue", LoadSceneMode.Additive);
     }
 }

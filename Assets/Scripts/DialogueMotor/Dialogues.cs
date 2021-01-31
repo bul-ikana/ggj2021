@@ -4,19 +4,19 @@
  */
 public static class Dialogues
 {
-    public static Dialogue panthouse;
+    public static Dialogue inicio;
     public static Dialogue casa;
     public static Dialogue abuela;
 
     static Dialogues()
     {
-        Dialogues.panthouse = new Dialogue();
-        Dialogues.panthouse.SetBackground("bg2");
-        Dialogues.panthouse.SetCharacter1("Julio");
-        Dialogues.panthouse.SetCharacter2("None");
-        Dialogues.panthouse.Add(0, "Bueno, aquí vamos de nuevo.");
-        Dialogues.panthouse.Add(0, "Hora de abrir la panadería, hoy cocinaré el mejor pan que este pueblo ha visto.");
-        Dialogues.panthouse.Add(0, "Hoy es. Hoy es el día.");
+        Dialogues.inicio = new Dialogue();
+        Dialogues.inicio.SetBackground("bg2");
+        Dialogues.inicio.SetCharacter1("Julio");
+        Dialogues.inicio.SetCharacter2("None");
+        Dialogues.inicio.Add(0, "Bueno, aquí vamos de nuevo.");
+        Dialogues.inicio.Add(0, "Hora de abrir la panadería, hoy cocinaré el mejor pan que este pueblo ha visto.");
+        Dialogues.inicio.Add(0, "Hoy es. Hoy es el día.");
 
 
         Dialogues.casa = new Dialogue();

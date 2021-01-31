@@ -71,7 +71,7 @@ public class DialogueScene : MonoBehaviour
             dialogueText.text = DialogueMotor.CurrentDialogue.Messages[index].Text;   
             prev_character = new_character;
         } else {
-            SceneManager.LoadScene(DialogueMotor.CurrentScene);
+            SceneManager.UnloadScene("Dialogue");
         }
     }
 }

@@ -24,6 +24,9 @@ public class TravelManager : MonoBehaviour
 
     // All nodes positions
     private Dictionary<string, Vector2> travelNodes = new Dictionary<string, Vector2>();
+    
+    // All node nodes (lol)
+    private Dictionary<string, TravelNode> nodeNodes = new Dictionary<string, TravelNode>();
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +48,12 @@ public class TravelManager : MonoBehaviour
         {
             GameObject go = travelNodesObjects[i];
             travelNodes.Add(go.gameObject.name, (Vector2)go.gameObject.transform.position);
+        }
+
+        for (int i = 0; i < travelNodesObjects.Count; i++)
+        {
+            GameObject go = travelNodesObjects[i];
+            nodeNodes.Add(go.gameObject.name, go.GetComponent<TravelNode>());
         }
     }
 
@@ -70,6 +79,7 @@ public class TravelManager : MonoBehaviour
                     characterTransform.position += ((Vector3)direction * speed * Time.deltaTime);
                     moving = false;
                     currentNode = goalNode;
+                    nodeNodes[currentNode].TriggerGoal();
                     return;
                 }
 
