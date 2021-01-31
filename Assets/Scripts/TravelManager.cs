@@ -25,7 +25,7 @@ public class TravelManager : MonoBehaviour
     // All nodes positions
     private Dictionary<string, Vector2> travelNodes = new Dictionary<string, Vector2>();
 
-    // 
+    // For controlled pauses in Update
     private float pauseDuration = 0;
 
     // Start is called before the first frame update
@@ -142,6 +142,12 @@ public class TravelManager : MonoBehaviour
         currentNode = collision.gameObject.name;
         pauseDuration = 0.05f;
         moving = false;
+
+        // Special exceptions for z coordinate
+        if (currentNode == "Node (1)" || currentNode == "Node (5)")
+            characterTransform.position = new Vector3(characterTransform.position.x, characterTransform.position.y, 0);
+        else if (currentNode == "Node (2)" || currentNode == "Node (10)")
+            characterTransform.position = new Vector3(characterTransform.position.x, characterTransform.position.y, -3);
     }
 
     void OnTriggerExit2D(Collider2D collision)
