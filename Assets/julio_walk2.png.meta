@@ -1,28 +1,31 @@
 fileFormatVersion: 2
-guid: 218ac61238e7c4c48a22d8dee3c93319
+guid: 8709c11c00082a94f8e3a4dcb746e53f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2180610447368193796
-    second: julio_walk_0
+      213: -821058696137597739
+    second: julio_walk2_0
   - first:
-      213: 2120519004494003744
-    second: julio_walk_1
+      213: -8379867172691697553
+    second: julio_walk2_1
   - first:
-      213: 325020929239152941
-    second: julio_walk_2
+      213: 276218603512806251
+    second: julio_walk2_2
   - first:
-      213: 7270943623490028492
-    second: julio_walk_3
+      213: -3449388712939444476
+    second: julio_walk2_3
   - first:
-      213: 3278421440695015468
-    second: julio_walk_4
+      213: -4818339669033350090
+    second: julio_walk2_4
   - first:
-      213: -5679178779669789937
-    second: julio_walk_5
+      213: -3768738158016343032
+    second: julio_walk2_5
   - first:
-      213: -2719403470821373347
-    second: julio_walk_6
+      213: -5371414413325269958
+    second: julio_walk2_6
+  - first:
+      213: 6918301764121748326
+    second: julio_walk2_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: julio_walk_0
+      name: julio_walk2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
-        width: 320
-        height: 320
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40703e406a5134e10800000000000000
-      internalID: 2180610447368193796
+      spriteID: 5dc19fc47730b94f0800000000000000
+      internalID: -821058696137597739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: julio_walk_1
+      name: julio_walk2_1
       rect:
         serializedVersion: 2
-        x: 320
-        y: 640
-        width: 320
-        height: 320
+        x: 128
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02e7452bcc89d6d10800000000000000
-      internalID: 2120519004494003744
+      spriteID: f6021c2743bb4bb80800000000000000
+      internalID: -8379867172691697553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: julio_walk_2
+      name: julio_walk2_2
       rect:
         serializedVersion: 2
-        x: 640
-        y: 640
-        width: 320
-        height: 320
+        x: 256
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d29fdd720d4b28400800000000000000
-      internalID: 325020929239152941
+      spriteID: b6b3cbe3b5355d300800000000000000
+      internalID: 276218603512806251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: julio_walk_3
+      name: julio_walk2_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 320
-        width: 320
-        height: 320
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc3c304d3b497e460800000000000000
-      internalID: 7270943623490028492
+      spriteID: 407a001cd3f4120d0800000000000000
+      internalID: -3449388712939444476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: julio_walk_4
+      name: julio_walk2_4
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
-        width: 320
-        height: 320
+        x: 128
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2896a43eea4f7d20800000000000000
-      internalID: 3278421440695015468
+      spriteID: 63c08148991d12db0800000000000000
+      internalID: -4818339669033350090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: julio_walk_5
+      name: julio_walk2_5
       rect:
         serializedVersion: 2
-        x: 640
-        y: 320
-        width: 320
-        height: 320
+        x: 256
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0388dd4df08f21b0800000000000000
-      internalID: -5679178779669789937
+      spriteID: 804d9f7ec90c2bbc0800000000000000
+      internalID: -3768738158016343032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: julio_walk_6
+      name: julio_walk2_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 320
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,8 +267,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5a4ab883fcb24ad0800000000000000
-      internalID: -2719403470821373347
+      spriteID: a348550dc07e475b0800000000000000
+      internalID: -5371414413325269958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julio_walk2_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6636f6bbcceb20060800000000000000
+      internalID: 6918301764121748326
       vertices: []
       indices: 
       edges: []

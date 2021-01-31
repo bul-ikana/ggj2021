@@ -27,6 +27,7 @@ public class attractCharacter : MonoBehaviour
 
     	charTransform.position += direction * speed * Time.deltaTime;
         Vector3 vec = gameObject.transform.position - (charTransform.position + direction * speed * Time.deltaTime);
+        vec.z = 0.0f;
         if (vec.normalized != direction)
             direction = Vector3.zero;
     }
@@ -35,6 +36,7 @@ public class attractCharacter : MonoBehaviour
     {
         direction = gameObject.transform.position - charTransform.position;
         direction = direction.normalized;
+        direction.z = 0.0f;
         SpriteRenderer sr = character.gameObject.GetComponent<SpriteRenderer>();
         sr.flipX = direction.x < 0;
     }
