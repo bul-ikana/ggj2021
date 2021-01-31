@@ -25,6 +25,9 @@ public class TravelManager : MonoBehaviour
     // All nodes positions
     private Dictionary<string, Vector2> travelNodes = new Dictionary<string, Vector2>();
 
+    // 
+    private float pauseDuration = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +54,12 @@ public class TravelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(pauseDuration > 0.0f)
+        {
+            pauseDuration -= Time.deltaTime;
+            return;
+        }
+
         // Keyboard directions (arrows, wasd)
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
@@ -70,6 +79,9 @@ public class TravelManager : MonoBehaviour
                     characterTransform.position += ((Vector3)direction * speed * Time.deltaTime);
                     moving = false;
                     currentNode = goalNode;
+
+                    pauseDuration = 0.2f;
+
                     return;
                 }
 
