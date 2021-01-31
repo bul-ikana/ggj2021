@@ -98,8 +98,7 @@ public class MainGame : MonoBehaviour
 
     public void initState ()
     {
-        timeRemaining = 10f; // 1 MINUTE
-        // timeRemaining = 60f; // 1 MINUTE
+        timeRemaining = 60f; // 1 MINUTE
         currentRecipe = new int[] { 0, 0, 0, 0, 0, 0, 0};
         money         = 0;
         inOven        = false;
