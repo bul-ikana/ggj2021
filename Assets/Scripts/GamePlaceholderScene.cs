@@ -12,8 +12,8 @@ public class GamePlaceholderScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	if (Input.GetMouseButtonDown(0)) {
-        	SceneManager.LoadScene(DialogueMotor.CurrentScene);
+        if (Input.GetMouseButtonDown(0)) {
+            SceneManager.LoadScene(DialogueMotor.CurrentScene);
         }
     }
 }
