@@ -6,7 +6,7 @@ public class TravelManager : MonoBehaviour
 {
     // All the route points, added from inspector
     public List<GameObject> travelNodesObjects;
-    public float speed = 3;
+    public float speed = 3.0f;
 
     // For moving state managment
     private string currentNode = "";
@@ -33,6 +33,8 @@ public class TravelManager : MonoBehaviour
     {
         characterTransform = gameObject.transform;
         currentNode = travelNodesObjects[0].gameObject.name;
+        originNode = currentNode;
+        goalNode = currentNode;
 
         // Go to each node and save its neighbors in the list
         for (int i = 0; i < travelNodesObjects.Count; i++)
@@ -70,7 +72,7 @@ public class TravelManager : MonoBehaviour
             // If is already moving, applies another step
             if (moving)
             {
-                Vector2 charPos = (Vector2) characterTransform.position;
+                Vector2 charPos = (Vector2)characterTransform.position;
                 Vector2 vec = travelNodes[goalNode] - charPos;
 
                 // If is still moving and changes the direction about the goalNode, meaning that was surpassed, character reached goal
@@ -90,9 +92,18 @@ public class TravelManager : MonoBehaviour
             // If not moving find a posible node to move to
             else
             {
-                List<string> neighbors = travelNeighborsMap[currentNode];
                 pressedDirection.x = h;
                 pressedDirection.y = v;
+                List<string> neighbors;
+
+                if (currentNode == goalNode)
+                    neighbors = travelNeighborsMap[currentNode];
+                else
+                {
+                    neighbors = new List<string>();
+                    neighbors.Add(originNode);
+                    neighbors.Add(goalNode);
+                }
 
                 for (int i = 0; i < neighbors.Count; i++)
                 {
