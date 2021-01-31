@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CookingScene.unity
     guid: 1ec8e678776d243009d684d6a9ae079b
+  - enabled: 1
+    path: Assets/Scenes/TownMap.unity
+    guid: 697af7c21cc26604f89b672a49e45cb4
+  - enabled: 1
+    path: Assets/Scenes/AboutScene.unity
+    guid: 5da5b8daf1747504d8a4d9313db6692c
   m_configObjects: {}

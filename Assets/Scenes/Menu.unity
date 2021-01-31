@@ -847,7 +847,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 457770789}
         m_TargetAssemblyTypeName: MenuScene, Assembly-CSharp
-        m_MethodName: deleteProgress
+        m_MethodName: goToAbout
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

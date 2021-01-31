@@ -8,11 +8,12 @@ public class MenuScene : MonoBehaviour
 {
     public void goToGame()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("Intro");
     }
 
-    public void deleteProgress()
+    public void goToAbout()
     {
-        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("AboutScene");
     }
 }

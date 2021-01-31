@@ -34,16 +34,18 @@ public static class Dialogues
         Dialogues.casa.SetCharacter1("Julio");
         Dialogues.casa.SetCharacter2("Pasty");
         Dialogues.casa.Add(1, "Querido Julio.");
-        Dialogues.casa.Add(0, "¿Qué es esto? ¿Una carta de la abuela Pasty?");
+        Dialogues.casa.Add(0, "¿Qué es esto? ¿Una carta de la tía Pasty?");
         Dialogues.casa.Add(1, "Por favor te pido leas hasta el final de esta carta porque es mi voluntad que sepas que lo siento y estoy totalmente arrepentida de alejarme de tí.");
         Dialogues.casa.Add(1, "Si estás leyendo esto es porque mi lucha contra mi enfermedad me ha rebasado y ahora he tomado otro camino.");
         Dialogues.casa.Add(1, "No me puedo ir sin decirte lo mucho que te quiero. Siempre fuiste la única persona auténtica en esta familia, perdóname por no entender.");
         Dialogues.casa.Add(1, "Tal vez no sea la persona más preparada, ni mucho menos estoy segura de entender ni de entenderte pero te escribo con el corazón y este nunca se equivoca.");
-        Dialogues.casa.Add(0, "Abuela...");
+        Dialogues.casa.Add(0, "Tía Pasty...");
         Dialogues.casa.Add(1, "Después de que nos alejamos las cosas con la familia no fueron bien, comenzaron a salir aquellas intenciones disfrazadas de buen trato, nada más que interés disfrazados.");
         Dialogues.casa.Add(1, "En cuanto me dí cuenta de esta farsa decidí cerrar la panadería de la familia y me deshice de todas mis recetas, pues no quería que cayeran en manos equivocadas.");
         Dialogues.casa.Add(1, "Ahora tienes en tus manos parte de mi recetario. Por ahora sólo contiene recetas básicas. El resto se encuentran en Pastree resguardadas por varios de mis verdaderos amigos.");
         Dialogues.casa.Add(1, "En tus manos dejo mi legado y el de nuestra familia. Solo tú puedes decidir si quieres encontrarlo o no.");
         Dialogues.casa.Add(1, "Recuerda quién eres.\n\nTe quiere mucho, tu tía abuela Pasty.");
+        Dialogues.casa.Add(0, "¿Nuestro legado? Antes de morir ni siquiera me dirigias la palabra, y ahora de la nada recibo esta carta. ¿Es alguna especie de broma?");
+        Dialogues.casa.Add(0, "Kruspy Crumbs. Debieron ser ellos. Solo ellos podrian burlarse así de mi y de mi familia. Esto no se puede quedar así.");
     }
 }
