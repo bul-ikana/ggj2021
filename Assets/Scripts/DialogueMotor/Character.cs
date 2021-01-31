@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
     private Vector3 velocity        =   Vector3.zero;
     private Vector3 targetPosition  =   Vector3.zero;
 
-    void Start()
+    void Awake()
     {
         targetPosition = transform.position;
     }

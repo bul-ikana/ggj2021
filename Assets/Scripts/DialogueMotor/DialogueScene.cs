@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class DialogueScene : MonoBehaviour
 {
     private int index;
+    private int? new_character;
+    private int? prev_character;
 
     private Text dialogueText;
     private Character background;
@@ -55,18 +57,21 @@ public class DialogueScene : MonoBehaviour
     private void RenderText()
     {
         if (index < DialogueMotor.CurrentDialogue.Messages.Count) {
-
-            if (DialogueMotor.CurrentDialogue.Messages[index].Character == 0) {
-                character1.Highlight();
-                if (index != 0) character2.Deemphasize();
-            } else {
-                character2.Highlight();
-                if (index != 0) character1.Deemphasize();
+            new_character = DialogueMotor.CurrentDialogue.Messages[index].Character;
+            if (prev_character == null || prev_character != new_character) {
+                if (new_character == 0) {
+                    character1.Highlight();
+                    if (index != 0) character2.Deemphasize();
+                } else {
+                    character2.Highlight();
+                    if (index != 0) character1.Deemphasize();
+                }
             }
 
             dialogueText.text = DialogueMotor.CurrentDialogue.Messages[index].Text;   
+            prev_character = new_character;
         } else {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene(DialogueMotor.CurrentScene);
         }
     }
 }
