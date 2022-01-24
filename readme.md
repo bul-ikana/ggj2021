@@ -1,4 +1,4 @@
-# ![bread](Assets/Images/pancito.png) Pastree
+# ![bread](Assets/Images/minipancito.png) Pastree
 
 ![Pastree logo](Assets/pastree.png)
 
@@ -11,9 +11,5 @@ Game developed for the [Global Game Jam 2021](https://globalgamejam.org/2021/gam
 Code by @bul-ikana, @edmodj, @greed943.
 Art by [@itzegomind](https://www.instagram.com/itzegomind/), [@ravadovics](https://www.instagram.com/ravadovicz/)
 
-![Pastree logo](Assets/Sprites/Panteam.png)
-![Pastree logo](Assets/Sprites/Panteam2.png)
-![Pastree logo](Assets/Sprites/Panteam3.png)
-![Pastree logo](Assets/Sprites/Panteam4.png)
-![Pastree logo](Assets/Sprites/Panteam5.png)
+![Pixel art team](Assets/Images/team.png)
 
